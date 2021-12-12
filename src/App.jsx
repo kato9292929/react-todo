@@ -18,8 +18,10 @@ export const App = () => {
     setTodoText("");
   };
 
-  const onClickDelete = () => {
-    alert("削除!");
+  const onClickDelete = (index) => {
+    const newTodos = [...incompleteTodos];
+    newTodos.splice(index, 1);
+    setIncompleteTodos(newTodos);
   };
 
   return (
